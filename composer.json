@@ -15,6 +15,8 @@
         }
     ],
     "require": {
+        "ext-openssl": "*",
+        "ext-pdo": "*",
         "bref/bref": "^2.1",
         "bref/extra-php-extensions": "^1.2",
         "composer/installers": "^2.0",
@@ -22,8 +24,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drush/drush": "^12.1",
-        "ext-pdo": "*",
-        "ext-openssl": "*"
+        "vlucas/phpdotenv": "^5.5"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -39,6 +40,9 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "sort-packages": true
+    },
+    "autoload": {
+        "files": ["load.environment.php"]
     },
     "extra": {
         "drupal-scaffold": {
